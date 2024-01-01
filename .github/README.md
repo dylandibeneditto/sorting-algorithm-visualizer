@@ -16,4 +16,4 @@ The goal for this software is to hopefully contain every sorting algorithm.
 If you want to submit an algorithm, please see the [contribution guidelines](./CONTRIBUTIONS.md) document.
 
 ## license
-This project is not yet licensed.
+This project licensed under the [GPL-3.0 license](../LICENSE.md)
