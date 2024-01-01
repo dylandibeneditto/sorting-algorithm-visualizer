@@ -26,7 +26,7 @@ export default class Visualizer {
         this.currentVolume = null;
 
         this.resize();
-        this.render();
+        this.newCanvas();
 
         window.addEventListener("resize", () => this.resize());
     }
@@ -77,6 +77,7 @@ export default class Visualizer {
                 this.check();
             } else {
                 this.checkStep = 0;
+                this.newCanvas()
                 clearInterval(interval);
             }
         }, 0.1);
@@ -157,6 +158,19 @@ export default class Visualizer {
     check() {
         this.ctx.clearRect(0, 0, this.canvasEl.width, this.canvasEl.height);
         this.playNote(this.minFreq + ((this.maxFreq - this.minFreq) * (this.checkStep / this.n)), 50, this.gain);
+        for (let i = 0; i < this.n; i++) {
+            if (i < this.checkStep) {
+                this.ctx.fillStyle = "rgb(200,255,200)";
+            } else {
+                const hslColor = this.hslToRgb(i / this.n, 1, 0.6);
+                this.ctx.fillStyle = `rgb(${hslColor.join(",")})`;
+            }
+            this.ctx.fillRect(i * (this.blockWidth), this.canvasEl.height, this.blockWidth, (-this.blockHeight * (i + 1)));
+        }
+    }
+
+    newCanvas() {
+        this.ctx.clearRect(0,0,this.canvasEl.width, this.canvasEl.height)
         for (let i = 0; i < this.n; i++) {
             if (i < this.checkStep) {
                 this.ctx.fillStyle = "green";
