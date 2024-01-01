@@ -13,7 +13,7 @@ import bucketsort from './algorithms/bucketsort.js';
 import combsort from './algorithms/combsort.js';
 
 const el = document.getElementById("container");
-const v = new Visualizer(combsort,10,100,el)
+const v = new Visualizer(combsort,1,1000,el)
 
 document.addEventListener('click', () => {
     v.start()

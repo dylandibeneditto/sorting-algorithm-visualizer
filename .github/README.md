@@ -4,11 +4,14 @@ This software aims to visualize algorithms through step-by-step execution of ope
 ## supported algorithms
 - [`Binary insertion sort`](/src/js/algorithms/binaryinsertionsort.js)
 - [`Bubble sort`](/src/js/algorithms/binaryinsertionsort.js)
-- [`Insertion sort`](/src/js/algorithms/binaryinsertionsort.js)
-- [`LSD radix sort`](/src/js/algorithms/binaryinsertionsort.js)
-- [`Merge sort`](/src/js/algorithms/binaryinsertionsort.js)
-- [`Quick sort`](/src/js/algorithms/binaryinsertionsort.js)
-- [`Selection sort`](/src/js/algorithms/binaryinsertionsort.js)
+- [`Bucket sort`](/src/js/algorithms/bucketsort.js)
+- [`Comb sort`](/src/js/algorithms/combsort.js)
+- [`Counting Sort`](/src/js/algorithms/countingsort.js)
+- [`Insertion sort`](/src/js/algorithms/insertionsort.js)
+- [`LSD radix sort`](/src/js/algorithms/LSDradixsort.js)
+- [`Merge sort`](/src/js/algorithms/mergesort.js)
+- [`Quick sort`](/src/js/algorithms/quicksort.js)
+- [`Selection sort`](/src/js/algorithms/selectionsort.js)
 
 ## contributions
 The goal for this software is to hopefully contain every sorting algorithm.
