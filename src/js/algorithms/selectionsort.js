@@ -8,7 +8,9 @@ export default function selectionsort(list) {
         for (let j = i + 1; j < list.length; j++) {
             if (list[j] < list[minIndex]) {
                 minIndex = j;
+                console.log([...list])
                 list[length] = [j]
+                result.push([...list]);
             }
         }
 
@@ -17,9 +19,11 @@ export default function selectionsort(list) {
             for (let k = minIndex; k > i; k--) {
                 list[k] = list[k - 1];
             }
-            list[length].push(minValue)
+            list[length] = [...list[length], minValue]
             list[i] = minValue;
             result.push([...list]);
+            list.pop()
+            list.pop()
         }
     }
 
