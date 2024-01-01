@@ -89,6 +89,9 @@ export default class Visualizer {
 
         this.blockWidth = window.innerWidth / this.n;
         this.blockHeight = window.innerHeight / this.n;
+        if(!this.isWorking||this.checkStep>0) {
+            this.newCanvas();
+        }
     }
 
     animation() {
@@ -150,7 +153,7 @@ export default class Visualizer {
                     const hslColor = this.hslToRgb(item / this.n, 1, 0.6);
                     this.ctx.fillStyle = `rgb(${hslColor.join(",")})`;
                 }
-                this.ctx.fillRect(i * (this.blockWidth), this.canvasEl.height, this.blockWidth, (-this.blockHeight * item));
+                this.ctx.fillRect(i * (this.blockWidth)-1, this.canvasEl.height, this.blockWidth+1, (-this.blockHeight * item));
             }
         }
     }
@@ -165,7 +168,7 @@ export default class Visualizer {
                 const hslColor = this.hslToRgb(i / this.n, 1, 0.6);
                 this.ctx.fillStyle = `rgb(${hslColor.join(",")})`;
             }
-            this.ctx.fillRect(i * (this.blockWidth), this.canvasEl.height, this.blockWidth, (-this.blockHeight * (i + 1)));
+            this.ctx.fillRect(i * (this.blockWidth)-1, this.canvasEl.height, this.blockWidth+1, (-this.blockHeight * (i + 1)));
         }
     }
 
@@ -174,7 +177,7 @@ export default class Visualizer {
         for (let i = 0; i < this.n; i++) {
             const hslColor = this.hslToRgb(i / this.n, 1, 0.6);
             this.ctx.fillStyle = `rgb(${hslColor.join(",")})`;
-            this.ctx.fillRect(i * (this.blockWidth), this.canvasEl.height, this.blockWidth, (-this.blockHeight * (i + 1)));
+            this.ctx.fillRect(i * (this.blockWidth)-1, this.canvasEl.height, this.blockWidth+1, (-this.blockHeight * (i + 1)));
         }
     }
 }
