@@ -9,6 +9,9 @@ export default function quicksort(list) {
             if (list[j] < pivot) {
                 i++;
                 [list[i], list[j]] = [list[j], list[i]];
+                let newList = [...list];
+                newList[list.length+1] = [i]
+                result.push(newList)
             }
         }
 
