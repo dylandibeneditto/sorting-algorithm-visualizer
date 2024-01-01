@@ -1,4 +1,4 @@
-import currentListState from "../util algorithms/currentlist";
+import currentListState from "../util algorithms/currentlist.js";
 
 export default function mergesort(list) {
     const result = [];
