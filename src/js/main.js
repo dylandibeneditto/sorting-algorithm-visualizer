@@ -10,9 +10,10 @@ import quicksort from './algorithms/quicksort.js';
 import LSDradixsort from './algorithms/LSDradixsort.js';
 import countingsort from './algorithms/countingsort.js';
 import bucketsort from './algorithms/bucketsort.js';
+import combsort from './algorithms/combsort.js';
 
 const el = document.getElementById("container");
-const v = new Visualizer(bucketsort,10,100,el)
+const v = new Visualizer(combsort,10,100,el)
 
 document.addEventListener('click', () => {
     v.start()
