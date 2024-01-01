@@ -13,22 +13,25 @@ export default function mergesort(list) {
             } else {
                 sortedArr.push(right[rightIndex++]);
             }
-            const currentListState = [...list];
-            currentListState.splice(index, list.length, ...sortedArr);
+            const currentList = currentListState(sortedArr, index, [...list], length)
+            result.push(currentList)
+            list = currentList
         }
 
         while (leftIndex < left.length) {
             sortedArr.push(left[leftIndex++]);
 
-            const currentListState = [...list];
-            currentListState.splice(index, list.length, ...sortedArr);
+            const currentList = currentListState(sortedArr, index, [...list], length)
+            result.push(currentList)
+            list = currentList
         }
 
         while (rightIndex < right.length) {
             sortedArr.push(right[rightIndex++]);
 
-            const currentListState = [...list];
-            currentListState.splice(index, list.length, ...sortedArr);
+            const currentList = currentListState(sortedArr, index, [...list], length)
+            result.push(currentList)
+            list = currentList
         }
         return sortedArr;
     }

@@ -10,7 +10,7 @@ import quicksort from './algorithms/quicksort.js';
 import LSDradixsort from './algorithms/LSDradixsort.js';
 
 const el = document.getElementById("container");
-const v = new Visualizer(quicksort,10,99,el)
+const v = new Visualizer(selectionsort,1,200,el)
 
 document.addEventListener('click', () => {
     v.start()
