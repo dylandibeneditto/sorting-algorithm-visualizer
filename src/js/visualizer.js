@@ -136,7 +136,7 @@ export default class Visualizer {
     render() {
         this.ctx.clearRect(0, 0, this.canvasEl.width, this.canvasEl.height);
         if (this.allSteps[this.step][this.n + 1]) {
-            if(this.allSteps[this.step][this.n+1][0]>=0) {
+            if (this.allSteps[this.step][this.n + 1][0] >= 0) {
                 this.playNote(this.minFreq + ((this.maxFreq - this.minFreq) * (this.allSteps[this.step][this.allSteps[this.step][this.n + 1][0]] / this.n)), 50, this.gain);
             }
         }
@@ -145,7 +145,7 @@ export default class Visualizer {
             if (this.allSteps[this.step][this.n + 1]) {
                 const item = this.allSteps[this.step][i];
                 if (this.allSteps[this.step][this.n + 1].includes(i) && this.step < this.allSteps.length - 1) {
-                    this.ctx.fillStyle = "red";
+                    this.ctx.fillStyle = "white";
                 } else {
                     const hslColor = this.hslToRgb(item / this.n, 1, 0.6);
                     this.ctx.fillStyle = `rgb(${hslColor.join(",")})`;
@@ -170,14 +170,10 @@ export default class Visualizer {
     }
 
     newCanvas() {
-        this.ctx.clearRect(0,0,this.canvasEl.width, this.canvasEl.height)
+        this.ctx.clearRect(0, 0, this.canvasEl.width, this.canvasEl.height)
         for (let i = 0; i < this.n; i++) {
-            if (i < this.checkStep) {
-                this.ctx.fillStyle = "green";
-            } else {
-                const hslColor = this.hslToRgb(i / this.n, 1, 0.6);
-                this.ctx.fillStyle = `rgb(${hslColor.join(",")})`;
-            }
+            const hslColor = this.hslToRgb(i / this.n, 1, 0.6);
+            this.ctx.fillStyle = `rgb(${hslColor.join(",")})`;
             this.ctx.fillRect(i * (this.blockWidth), this.canvasEl.height, this.blockWidth, (-this.blockHeight * (i + 1)));
         }
     }
