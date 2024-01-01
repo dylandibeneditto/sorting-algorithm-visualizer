@@ -1,3 +1,5 @@
+import currentListState from "../util algorithms/currentlist";
+
 export default function mergesort(list) {
     const result = [];
     const length = [...list].length+1;
@@ -55,15 +57,3 @@ export default function mergesort(list) {
     return result;
 }
 
-function currentListState(arr, index, list, length) {
-    let aux = []
-    for (let i = 0; i < list.length; i++) {
-        if(i>index-1&&i<arr.length+index) {
-            aux.push(arr[i-index])
-        } else {
-            aux.push(list[i])
-        }
-    }
-    aux[length] = [index]
-    return aux;
-}
