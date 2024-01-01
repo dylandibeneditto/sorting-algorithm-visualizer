@@ -8,9 +8,10 @@ import insertionsort from './algorithms/insertionsort.js';
 import binaryinsertionsort from './algorithms/binaryinsertionsort.js';
 import quicksort from './algorithms/quicksort.js';
 import LSDradixsort from './algorithms/LSDradixsort.js';
+import countingsort from './algorithms/countingsort.js';
 
 const el = document.getElementById("container");
-const v = new Visualizer(LSDradixsort,1,2000,el)
+const v = new Visualizer(countingsort,10,100,el)
 
 document.addEventListener('click', () => {
     v.start()
