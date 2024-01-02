@@ -11,9 +11,10 @@ import LSDradixsort from './algorithms/LSDradixsort.js';
 import countingsort from './algorithms/countingsort.js';
 import bucketsort from './algorithms/bucketsort.js';
 import combsort from './algorithms/combsort.js';
+import cocktailsort from './algorithms/cocktailsort.js';
 
 const el = document.getElementById("container");
-const v = new Visualizer(combsort,1,1000,el)
+const v = new Visualizer(cocktailsort,10,100,el)
 
 document.addEventListener('click', () => {
     v.start()
