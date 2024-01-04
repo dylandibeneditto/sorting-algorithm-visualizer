@@ -12,9 +12,10 @@ import countingsort from './algorithms/countingsort.js';
 import bucketsort from './algorithms/bucketsort.js';
 import combsort from './algorithms/combsort.js';
 import cocktailsort from './algorithms/cocktailsort.js';
+import heapsort from './algorithms/heapsort.js';
 
 const el = document.getElementById("container");
-const v = new Visualizer(cocktailsort,10,100,el)
+const v = new Visualizer(heapsort,1,100,el)
 
 document.addEventListener('click', () => {
     v.start()
