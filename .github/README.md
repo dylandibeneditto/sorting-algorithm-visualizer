@@ -5,6 +5,7 @@ This software aims to visualize algorithms through step-by-step execution of ope
 - [`Binary insertion sort`](/src/js/algorithms/binaryinsertionsort.js)
 - [`Bubble sort`](/src/js/algorithms/binaryinsertionsort.js)
 - [`Bucket sort`](/src/js/algorithms/bucketsort.js)
+- [`Cocktail sort`](/src/js/algorithms/cocktailsort.js)
 - [`Comb sort`](/src/js/algorithms/combsort.js)
 - [`Counting Sort`](/src/js/algorithms/countingsort.js)
 - [`Insertion sort`](/src/js/algorithms/insertionsort.js)
